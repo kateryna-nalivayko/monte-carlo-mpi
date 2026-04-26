@@ -1,0 +1,30 @@
+[project]
+name = "monte-carlo-mpi"
+version = "0.1.0"
+description = "Monte Carlo method with MPI parallelism — Numerical Methods Lab"
+requires-python = ">=3.11"
+dependencies = [
+    "mpi4py>=4.0.0",
+    "numpy>=1.26.0",
+    "numba>=0.60.0",
+]
+
+[project.optional-dependencies]
+plot = [
+    "matplotlib>=3.8.0",
+]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+mc-serial = "monte_carlo.cli:run_serial"
+mc-mpi = "monte_carlo.cli:run_mpi"
+mc-openmp = "monte_carlo.cli:run_openmp"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/monte_carlo"]
