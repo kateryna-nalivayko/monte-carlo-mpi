@@ -1,8 +1,12 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-.venv/
+# Збірка
+build/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+*.o
+*.a
+*.dylib
+monte-carlo/bin/
 
 # IDE
 .idea/
@@ -12,15 +16,7 @@ __pycache__/
 
 # Claude Code
 .claude/
-*.txt
-*.docx
-
-# Runtime data
-data/
-plots/
-*.pkl
 
 # OS
 .DS_Store
 Thumbs.db
-/docs
